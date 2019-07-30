@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MollyComponent } from './molly/molly.component';
 import { BrianComponent } from './brian/brian.component';
+import { SwapiSearchComponent } from './swapi-search/swapi-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MollyComponent,
-    BrianComponent
+    BrianComponent,
+    SwapiSearchComponent
   ],
   imports: [
     BrowserModule,
