@@ -6,10 +6,13 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+
 import { MollyComponent } from './molly/molly.component';
 import { BrianComponent } from './brian/brian.component';
 import { SwapiSearchComponent } from './swapi-search/swapi-search.component';
 import { FrontendSearchFunctionComponent } from './frontend-search-function/frontend-search-function.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,7 @@ import { FrontendSearchFunctionComponent } from './frontend-search-function/fron
     MollyComponent,
     BrianComponent,
     SwapiSearchComponent,
-    FrontendSearchFunctionComponent
+    FrontendSearchFunctionComponent,
   ],
   imports: [
     BrowserModule,
