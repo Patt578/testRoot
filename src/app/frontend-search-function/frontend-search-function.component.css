@@ -3,6 +3,8 @@
     max-width: 500px;
     width: 100%;
     margin: auto;
+    /* background-color: aquamarine; */
+    /* padding: 0px; */
 }
   
 .example-full-width {
@@ -11,11 +13,24 @@
 
 mat-form-field {
     margin-top: 10px;
-    margin-right: 12px;
+    /* margin-right: 12px; */
     margin-bottom: 5px;
-    margin-left: 50%;
+    /* margin-left: 50%; */
 }
 
 mat-label {
     margin: 5px 5px;
+}
+
+#submit-btn {
+    padding: 10px;
+    border: none;
+    background-color: yellow;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.btn-row {
+    text-align: center;
 }
