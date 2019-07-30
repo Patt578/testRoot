@@ -9,6 +9,7 @@ import { ButtonComponent } from './button/button.component';
 import { MollyComponent } from './molly/molly.component';
 import { BrianComponent } from './brian/brian.component';
 import { SwapiSearchComponent } from './swapi-search/swapi-search.component';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SwapiSearchComponent } from './swapi-search/swapi-search.component';
     MollyComponent,
     BrianComponent,
     SwapiSearchComponent,
-    ButtonComponent
+    ButtonComponent,
+    CardComponent
 
   ],
   imports: [
