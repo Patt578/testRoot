@@ -1,0 +1,17 @@
+<form class="example-form">
+    <mat-form-field>
+        <mat-label>Swapi Categories</mat-label>
+        <mat-select value="" required="required" [(value)]="url.group">
+            <mat-option value="people">people</mat-option>
+            <mat-option value="starships">ships</mat-option>
+            <mat-option value="films">films</mat-option>
+        </mat-select>
+    </mat-form-field>
+      
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Search" required="required" name="search" [(ngModel)]="url.search">
+    </mat-form-field>
+    <button (click)="onSubmit()" type="submit">Submit</button>
+</form>
+      
+      
