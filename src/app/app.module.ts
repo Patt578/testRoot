@@ -11,8 +11,11 @@ import { AppComponent } from './app.component';
 import { MollyComponent } from './molly/molly.component';
 import { BrianComponent } from './brian/brian.component';
 import { SwapiSearchComponent } from './swapi-search/swapi-search.component';
+
+import { CardComponent } from './card/card.component';
 import { FetchSwapiService } from './fetch-swapi.service'
 import { FrontendSearchFunctionComponent } from './frontend-search-function/frontend-search-function.component';
+
 
 
 @NgModule({
@@ -21,6 +24,9 @@ import { FrontendSearchFunctionComponent } from './frontend-search-function/fron
     MollyComponent,
     BrianComponent,
     SwapiSearchComponent,
+    ButtonComponent,
+    CardComponent,
+
     FrontendSearchFunctionComponent,
   ],
   imports: [
