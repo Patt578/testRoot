@@ -18,8 +18,7 @@ import { CardComponent } from './card/card.component';
     MollyComponent,
     BrianComponent,
     SwapiSearchComponent,
-    ButtonComponent,
-    CardComponent
+    CardComponent,
 
   ],
   imports: [
