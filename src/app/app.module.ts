@@ -29,6 +29,10 @@ import { FrontendSearchFunctionComponent } from './frontend-search-function/fron
     MatSelectModule,
     AppRoutingModule,
   ],
+  exports: [
+    MatInputModule,
+    MatSelectModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
