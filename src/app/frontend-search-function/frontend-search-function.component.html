@@ -1,15 +1,15 @@
 <form class="example-form">
     <mat-form-field>
-        <mat-label>Category</mat-label>
-        <mat-select value="" required="required" [(value)]="url.group">
-            <mat-option value="people">people</mat-option>
-            <mat-option value="starships">ships</mat-option>
-            <mat-option value="films">films</mat-option>
+        <mat-label id="dd-label">Category</mat-label>
+        <mat-select id="dd" value="" required="required" [(value)]="url.group">
+            <mat-option id="dd-opt" value="people">people</mat-option>
+            <mat-option id="dd-opt" value="starships">ships</mat-option>
+            <mat-option id="dd-opt" value="films">films</mat-option>
         </mat-select>
     </mat-form-field>
       
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Search" required="required" name="search" [(ngModel)]="url.search">
+        <input matInput placeholder="Search" required="required" name="search" id="inpt" [(ngModel)]="url.search">
     </mat-form-field>
     <div class="btn-row">
         <button (click)="onSubmit()" type="submit" id="submit-btn">Submit</button>
