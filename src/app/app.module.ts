@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { MollyComponent } from './molly/molly.component';
 import { BrianComponent } from './brian/brian.component';
 import { SwapiSearchComponent } from './swapi-search/swapi-search.component';
+import { FetchSwapiService } from './fetch-swapi.service'
 import { FrontendSearchFunctionComponent } from './frontend-search-function/frontend-search-function.component';
 
 
@@ -24,16 +25,18 @@ import { FrontendSearchFunctionComponent } from './frontend-search-function/fron
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatSelectModule,
-    AppRoutingModule,
   ],
   exports: [
     MatInputModule,
     MatSelectModule
   ],
-  providers: [],
+  providers: [FetchSwapiService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
