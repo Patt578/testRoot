@@ -24,9 +24,7 @@ import { FrontendSearchFunctionComponent } from './frontend-search-function/fron
     MollyComponent,
     BrianComponent,
     SwapiSearchComponent,
-    ButtonComponent,
     CardComponent,
-
     FrontendSearchFunctionComponent,
   ],
   imports: [
