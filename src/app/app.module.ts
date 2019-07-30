@@ -31,7 +31,12 @@ import { FrontendSearchFunctionComponent } from './frontend-search-function/fron
     MatInputModule,
     MatSelectModule,
   ],
+  exports: [
+    MatInputModule,
+    MatSelectModule
+  ],
   providers: [FetchSwapiService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

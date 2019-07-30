@@ -11,8 +11,10 @@
 mat-form-field {
     margin-top: 10px;
     margin-right: 12px;
+    margin-bottom: 5px;
+    margin-left: 50%;
 }
 
-input {
-    border: 2px solid black;
+mat-label {
+    margin: 5px 5px;
 }
