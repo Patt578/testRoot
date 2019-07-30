@@ -6,6 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms'
 
 
 import { MollyComponent } from './molly/molly.component';
@@ -34,6 +35,7 @@ import { FrontendSearchFunctionComponent } from './frontend-search-function/fron
     BrowserAnimationsModule,
     MatInputModule,
     MatSelectModule,
+    FormsModule
   ],
   exports: [
     MatInputModule,
