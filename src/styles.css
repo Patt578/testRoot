@@ -1,2 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+:root {
+    --primary: #eeee16;
+    --primary-dark: #e3dc19;
+}
+
+body {
+    font-size: 1.2em;
+    background-image: url('./assets/space_bg.png');
+    background-repeat: repeat;
+}
