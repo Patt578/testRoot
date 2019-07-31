@@ -9,8 +9,12 @@ export class FetchSwapiService {
 
   constructor(private http: HttpClient) { }
 
-  getData(group: string, search: string): Observable<any> {
-    return this.http.get(`https://swapi.co/api/${group}/${search}/`)
+  getData(group: string, search: any): Observable<any> {
+    if (isNaN(search)) { // if search term is not a number
+      return this.http.get(`https://swapi.co/api/${group}/?search=${search}`)
+    } else { // if search term is a number
+      return this.http.get(`https://swapi.co/api/${group}/${search}/`)
+    }
   }
 
 }
