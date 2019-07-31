@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { FetchSwapiService } from '../fetch-swapi.service'
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
-export class CardComponent implements OnInit {
+export class CardComponent implements OnChanges {
+  @Input() data
 
   name:string = '';
   height:number = 0;
@@ -15,6 +17,7 @@ export class CardComponent implements OnInit {
   eye_color:string ='';
   birth_year:string ='';
   gender:string ='';
+  homeworld = '';
 
   title:string = '';
   episode_id:number = 0;
@@ -35,12 +38,23 @@ export class CardComponent implements OnInit {
   hyperdrive_rating:number = 0;
   mglt:string ='';
 
-
-
   
-  constructor() { }
+  constructor(
+    private fetchService: FetchSwapiService
+  ) { }
 
-  ngOnInit() {
+  grabData() {
+    this.fetchService.grabData().subscribe((val:any) => this.data = val)
+    console.log(`grabbed ${this.data.name}`)
+
   }
+
+  ngOnChanges() {
+    console.log(`grabbed ${this.data.name}`)
+  }    
+
+  // ngOnInit() {
+  //   // this.grabData()
+  // }
 
 }
