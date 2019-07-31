@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchSwapiService } from '../fetch-swapi.service';
+import { isSyntaxError } from '@angular/compiler';
+import { isString } from 'util';
 
 
 @Component({
@@ -24,7 +26,7 @@ export class FrontendSearchFunctionComponent implements OnInit {
     } else {
       this.url.group = this.url.group
       this.fetchService.getData(this.url.group, this.url.search).subscribe((val:any) => {
-        if (isNaN(this.url.search)) {
+        if (isString(this.url.search)) {
           this.data = val.results[0]
           console.log(this.data.results[0])
         } else {
