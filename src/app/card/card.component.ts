@@ -14,7 +14,7 @@ import { FetchSwapiService } from '../fetch-swapi.service'
 export class CardComponent implements OnChanges {
   @Input() data:any
 
-  name:string = '';
+  name:string;
   height:number = 0;
   mass:number = 0;
   hair_color:string = '';
@@ -43,6 +43,45 @@ export class CardComponent implements OnChanges {
   hyperdrive_rating:number = 0;
   mglt:string ='';
 
+  peopleCard = (data) =>{
+    this.name = data.name;
+    this.height = data.height;
+    this.mass = data.mass;
+    this.hair_color = data.hair_color;
+    this.skin_color = data.skin_color;
+    this.eye_color = data.eye_color;
+    this.birth_year = data.birth_year;
+    this.gender = data.gender;
+    this.homeworld = data.homeworld;
+
+ 
+  }
+
+  filmCard = (data) =>{
+    this.title = data.title;
+    this.episode_id = data.episode_id;
+    this.opening_crawl = data.opening_crawl;
+    this.director = data.director;
+    this.producer = data.producer;
+    this.release_date = data.release_date;
+
+  }
+
+  shipCard=(data)=>{
+
+    this.ship_name = data.name;
+    this.model = data.model;
+    this.cost_in_credits = data.cost_in_credits;
+    this.length = data.length;
+    this.max_atmospheric_speed = data.max_atmosphering_speed;
+    this.crew = data.crew;
+    this.passengers = data.passengers;
+    this.cargo_capacity = data.cargo_capacity;
+    this.consumables = data.consumables;
+    this.hyperdrive_rating = data.hyperdrive_rating;
+    this.mglt = data.MGLT;
+
+  }
   
   constructor(
     private fetchService: FetchSwapiService
@@ -50,11 +89,20 @@ export class CardComponent implements OnChanges {
 
   grabData() {
     this.fetchService.grabData().subscribe((val:any) => this.data = val)
+   
     console.log(`grabbed ${this.data.name}`)
   }
 
 
   ngOnChanges() {
+    if(this.data['title'] !== undefined){
+      this.filmCard(this.data)
+    }else if(this.data['mass'] !== undefined){
+      this.peopleCard(this.data)
+    }else{
+      this.shipCard(this.data)
+    }
+    
     console.log(`grabbed ${this.data.name}`)
   }    
 
