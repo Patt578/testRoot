@@ -31,7 +31,7 @@ export class FrontendSearchFunctionComponent implements OnInit {
           console.log(this.data.results[0])
         } else {
           this.data = val;
-          // console.log(this.data)
+          console.log(this.data)
         }
         // console.log(this.data[0])
         })
