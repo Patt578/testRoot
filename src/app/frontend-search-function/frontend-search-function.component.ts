@@ -10,9 +10,10 @@ import { isDefined } from '@angular/compiler/src/util';
   styleUrls: ['./frontend-search-function.component.css']
 })
 export class FrontendSearchFunctionComponent implements OnInit {
+  search: any
   url = {
     group: '',
-    search: '',
+    search: this.search,
   }
   data: any;
 
@@ -28,10 +29,10 @@ export class FrontendSearchFunctionComponent implements OnInit {
       this.fetchService.getData(this.url.group, this.url.search).subscribe((val:any) => {
         if (isNaN(this.url.search)) {
           this.data = val.results[0]
-          console.log(this.data.results[0])
+          // console.log(this.data.results[0])
         } else {
           this.data = val;
-          console.log(this.data)
+          // console.log(this.data)
         }
         // console.log(this.data[0])
         })
