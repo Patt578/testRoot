@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { FrontendSearchFunctionComponent } from '../frontend-search-function/frontend-search-function.component';
 
 @Component({
   selector: 'app-card',
@@ -35,12 +37,16 @@ export class CardComponent implements OnInit {
   hyperdrive_rating:number = 0;
   mglt:string ='';
 
-
+  
 
   
-  constructor() { }
+  constructor(private frontendSearch: FrontendSearchFunctionComponent ) { }
 
   ngOnInit() {
+  }
+
+  getShip(): void {
+    this.frontendSearch
   }
 
 }

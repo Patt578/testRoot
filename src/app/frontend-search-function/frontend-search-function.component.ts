@@ -12,7 +12,7 @@ export class FrontendSearchFunctionComponent implements OnInit {
     group: '',
     search: '',
   }
-  data: any;
+  data = {};
 
   constructor(
     private fetchService: FetchSwapiService,
