@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchSwapiService } from '../fetch-swapi.service';
 import { isString } from 'util';
+import { isDefined } from '@angular/compiler/src/util';
 
 
 @Component({
@@ -25,12 +26,12 @@ export class FrontendSearchFunctionComponent implements OnInit {
     } else {
       this.url.group = this.url.group
       this.fetchService.getData(this.url.group, this.url.search).subscribe((val:any) => {
-        if (isString(this.url.search)) {
+        if (isDefined(this.url.search)) {
           this.data = val.results[0]
           console.log(this.data.results[0])
         } else {
           this.data = val;
-          console.log(this.data)
+          // console.log(this.data)
         }
         // console.log(this.data[0])
         })
