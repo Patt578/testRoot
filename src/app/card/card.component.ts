@@ -12,6 +12,7 @@ import { FetchSwapiService } from '../fetch-swapi.service'
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnChanges {
+  @Input() data:any
 
   name:string = '';
   height:number = 0;
@@ -52,10 +53,7 @@ export class CardComponent implements OnChanges {
     console.log(`grabbed ${this.data.name}`)
 
   }
-
-  }
-
-
+  
   ngOnChanges() {
     console.log(`grabbed ${this.data.name}`)
   }    
@@ -64,3 +62,4 @@ export class CardComponent implements OnChanges {
   //   // this.grabData()
   // }
 
+}
