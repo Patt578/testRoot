@@ -19,7 +19,6 @@ export class FetchSwapiService {
     }
   }
 
-
   holdData(data:any) {
     console.log(`holding ${data}`)
     this.data = data
