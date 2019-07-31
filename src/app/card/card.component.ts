@@ -86,9 +86,11 @@ export class CardComponent implements OnChanges {
     this.fetchService.grabData().subscribe((val:any) => this.data = val)
    
     console.log(`grabbed ${this.data.name}`)
+
   }
 
-
+  show: boolean = false;
+  
   ngOnChanges() {
     if(this.data['title'] !== undefined){
       this.filmCard(this.data)
@@ -102,7 +104,7 @@ export class CardComponent implements OnChanges {
   }    
 
   // ngOnInit() {
-  //   // this.grabData()
+  //   this.ngOnChanges()
   // }
 
 }
