@@ -1,10 +1,5 @@
-
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { FetchSwapiService } from '../fetch-swapi.service'
-
-
-
-
 
 @Component({
   selector: 'app-card',
@@ -22,7 +17,7 @@ export class CardComponent implements OnChanges {
   eye_color:string ='';
   birth_year:string ='';
   gender:string ='';
-  homeworld = '';
+  homeworld:string = '';
 
   title:string = '';
   episode_id:number = 0;
@@ -95,6 +90,7 @@ export class CardComponent implements OnChanges {
 
 
   ngOnChanges() {
+    console.log(this.data)
     if(this.data['title'] !== undefined){
       this.filmCard(this.data)
     }else if(this.data['mass'] !== undefined){

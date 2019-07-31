@@ -24,9 +24,10 @@ export class FrontendSearchFunctionComponent implements OnInit {
     } else {
       this.url.group = this.url.group
       this.fetchService.getData(this.url.group, this.url.search).subscribe((val:any) => {
+        // this.data = {};
         this.data = val;
         console.log(val)
-        // this.fetchService.holdData(this.data.name)
+        // console.log(this.data)
       })
     }
   }
