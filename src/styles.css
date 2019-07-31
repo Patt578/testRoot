@@ -2,8 +2,8 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 :root {
-    --primary: #eeee16;
-    --primary-dark: #e3dc19;
+    --primary: #ffe300;
+    --primary-dark: #ffd900;
 }
 
 body {

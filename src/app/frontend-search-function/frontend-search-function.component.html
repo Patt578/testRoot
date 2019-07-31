@@ -1,7 +1,7 @@
 <form class="example-form">
     <mat-form-field>
         <mat-label id="dd-label">Category</mat-label>
-        <mat-select id="dd" value="" required="required" [(value)]="url.group">
+        <mat-select id="dd" value="" required [(value)]="url.group">
             <mat-option id="dd-opt" value="people">people</mat-option>
             <mat-option id="dd-opt" value="starships">ships</mat-option>
             <mat-option id="dd-opt" value="films">films</mat-option>
@@ -16,6 +16,5 @@
     </div>
 </form>
 <hr>
-      
-<!-- {{url.group}} -->
-<!-- {{url.search}} -->
+
+<app-card [data]="data"></app-card>
