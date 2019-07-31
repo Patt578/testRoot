@@ -26,6 +26,7 @@ export class FrontendSearchFunctionComponent implements OnInit {
       this.fetchService.getData(this.url.group, this.url.search).subscribe((val:any) => {
         this.data = val;
         console.log(val)
+        // this.fetchService.holdData(this.data.name)
       })
     }
   }
