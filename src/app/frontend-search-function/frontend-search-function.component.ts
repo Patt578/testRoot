@@ -25,7 +25,7 @@ export class FrontendSearchFunctionComponent implements OnInit {
     } else {
       this.url.group = this.url.group
       this.fetchService.getData(this.url.group, this.url.search).subscribe((val:any) => {
-        if (isString(this.url.search)) {
+        if (isNaN(this.url.search)) {
           this.data = val.results[0]
           console.log(this.data.results[0])
         } else {
