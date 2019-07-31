@@ -85,7 +85,7 @@ export class CardComponent implements OnChanges {
   grabData() {
     this.fetchService.grabData().subscribe((val:any) => this.data = val)
    
-    console.log(`grabbed ${this.data.name}`)
+    console.log(`grabbed ${this.data.results}`)
 
   }
 
@@ -99,7 +99,7 @@ export class CardComponent implements OnChanges {
       this.shipCard(this.data)
     }
     
-    console.log(`grabbed ${this.data.name}`)
+    console.log(`grabbed ${this.data.results[0]}`)
   }    
 
   // ngOnInit() {
