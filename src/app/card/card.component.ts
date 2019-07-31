@@ -92,7 +92,6 @@ export class CardComponent implements OnChanges {
   show: boolean = false;
   
   ngOnChanges() {
-    console.log(this.data)
     if(this.data['title'] !== undefined){
       this.filmCard(this.data)
     }else if(this.data['mass'] !== undefined){
@@ -101,7 +100,7 @@ export class CardComponent implements OnChanges {
       this.shipCard(this.data)
     }
     
-    console.log(`grabbed ${this.data.name}`)
+    // console.log(`grabbed ${this.data.name}`)
   }    
 
   // ngOnInit() {
