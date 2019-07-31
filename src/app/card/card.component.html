@@ -1,5 +1,5 @@
 <div  id="displayDiv">
-    <div  id="peopleCard">
+    <div  id="peopleCard" *ngIf="ngOnChanges()">
         <h3 >{{name}}</h3>
         <hr >
         <p >height: {{height}} </p>
@@ -12,7 +12,7 @@
         <p >homeworld: {{homeworld}}</p>
     </div>
 
-    <div  id="filmCard">
+    <div  id="filmCard" *ngIf="filmCard(data)">
         <h3 >{{title}} </h3>
         <hr >
         <p >Episode Id: {{episode_id}} </p>
@@ -23,7 +23,7 @@
         <p ></p>
     </div>
 
-    <div  id="shipCard">
+    <div  id="shipCard" *ngIf="shipCard(data)">
         <h3 >{{ship_name}}</h3>
         <hr >
         <p >Model: {{model}}  </p>

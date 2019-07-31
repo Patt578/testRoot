@@ -93,6 +93,8 @@ export class CardComponent implements OnChanges {
     console.log(`grabbed ${this.data.name}`)
 
   }
+
+  show: boolean = false;
   
   ngOnChanges() {
     if(this.data['title'] !== undefined){
@@ -107,7 +109,7 @@ export class CardComponent implements OnChanges {
   }    
 
   // ngOnInit() {
-  //   // this.grabData()
+  //   this.ngOnChanges()
   // }
 
 }
